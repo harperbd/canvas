@@ -1,2 +1,11 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Users Form</h1>
+
+<% form_for @user do |u| %>
+  <%= u.label :first_name %>
+  <%= u.text_field :first_name, required: true %>
+
+  <%= u.label :last_name %>
+  <%= u.text_field :last_name %>
+
+  <%= u.submit %>
+<% end %>
